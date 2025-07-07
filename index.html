@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabish Farhan</title>
+    <title>Sapinox</title>
 
     <!-- ✅ Favicon -->
-     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
 </head>
+
+<body>
+    
+
+
+<!-- Bottom nav bar for Pharmacy Website -->
+
+<div class="bottom-nav">
+  <a href="#home" title="Home"><i class="fa-solid fa-house"></i></a>
+
+  <a href="#shop" title="Shop"><i class="fa-solid fa-prescription-bottle-medical"></i></a>
+
+  <a href="#categories" title="Categories"><i class="fa-solid fa-capsules"></i></a>
+
+  <a href="#cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+  <a href="#contact" title="Contact"><i class="fa-solid fa-phone"></i></a>
+</div>
+
+
+
+
+<!-- top navbar -->
+
+ 
+  <nav class="top-navbar">
+    <div class="left">
+     <a href="#"> <img src="assets/logo.png" alt="Logo" class="logo"></a>
+    </div>
+
+    <div class="right">
+      <a href="#login"><i class="fa-regular fa-user"></i> Hello, Log in</a>
+      <a href="#offers"><i class="fa-solid fa-gear"></i> Offers</a>
+      <a href="#cart"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    </div>
+  </nav>
+
+
+
+<!-- Hamburger Button -->
+<div class="hamburger" onclick="toggleMenu()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#login"><i class="fa-regular fa-user"></i> Hello, Log in</a>
+  <a href="#offers"><i class="fa-solid fa-gear"></i> Offers</a>
+  <a href="#cart"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+</div>
+
+
+<!-- Search section  -->
+<section class="search-section">
+  <div class="search-header">
+    <h2>What are you looking for?</h2>
+
+    <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+      <label for="prescription-upload" class="upload-btn">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>Order with prescription.</span>
+        <strong>UPLOAD NOW <i class="fa-solid fa-chevron-right"></i></strong>
+        <input type="file" name="prescription" id="prescription-upload" onchange="this.form.submit()">
+      </label>
+    </form>
+  </div>
+
+  <form action="/search" method="GET" class="search-form">
+    <div class="search-input-wrapper">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" name="query" placeholder="Search for medicines, health drinks..." required>
+    </div>
+    <button type="submit" class="search-button">Search</button>
+  </form>
+</section>
+
+
+
+
+<script src="script.js"></script>
+</body>
