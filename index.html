@@ -81,13 +81,53 @@
   </div>
 
   <form action="/search" method="GET" class="search-form">
-    <div class="search-input-wrapper">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" name="query" placeholder="Search for medicines, health drinks..." required>
+    <div class="search-combined">
+      <div class="location-select" onclick="toggleLocationDropdown()">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Deliver to <strong id="selected-pincode">110002</strong></span>
+        <i class="fa-solid fa-chevron-down"></i>
+        <div class="dropdown" id="location-dropdown">
+          <p><strong>Where do you want the delivery?</strong></p>
+          <input type="text" placeholder="Enter Pincode" oninput="updatePincode(this.value)">
+          <button type="button" onclick="detectLocation()">Detect my location</button>
+        </div>
+      </div>
+
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" name="query" placeholder="Search for medicines, health drinks..." required>
+      </div>
+
+      <button type="submit" class="search-button">Search</button>
     </div>
-    <button type="submit" class="search-button">Search</button>
   </form>
 </section>
+
+
+<!-- category icons -->
+<section class="category-icons">
+  <div class="category-item">
+    <img src="assets/medicines.jpg" alt="Medicine">
+    <span>Medicine</span>
+  </div>
+  <div class="category-item">
+    <img src="assets/wellness.jpg" alt="Wellness">
+    <span>Wellness</span>
+  </div>
+  <div class="category-item">
+    <img src="assets/labtest.jpg" alt="Lab Tests">
+    <span>Lab Tests</span>
+  </div>
+  <div class="category-item">
+    <img src="assets/beauty.jpg" alt="Beauty">
+    <span>Beauty <i class="fa-solid fa-chevron-down"></i></span>
+  </div>
+  <div class="category-item">
+    <img src="assets/healthcare.jpg" alt="Health Corner">
+    <span>Health Corner <i class="fa-solid fa-chevron-down"></i></span>
+  </div>
+</section>
+
 
 
 
