@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
     <title>Sapinox</title>
 
     <!-- ✅ Favicon -->
@@ -16,6 +18,15 @@
 
 <body>
     
+<!-- preloader -->
+<!-- Circular Preloader -->
+ <div class="preloader"> 
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-text">S<span>P</span></div>
+        </div>
+    </div>  
 
 
 <!-- Bottom nav bar for Pharmacy Website -->
@@ -110,24 +121,70 @@
     <img src="assets/medicines.jpg" alt="Medicine">
     <span>Medicine</span>
   </div>
-  <div class="category-item">
+
+  <!-- <div class="category-item">
     <img src="assets/wellness.jpg" alt="Wellness">
     <span>Wellness</span>
-  </div>
+  </div> -->
+
   <div class="category-item">
     <img src="assets/labtest.jpg" alt="Lab Tests">
     <span>Lab Tests</span>
   </div>
-  <div class="category-item">
-    <img src="assets/beauty.jpg" alt="Beauty">
-    <span>Beauty <i class="fa-solid fa-chevron-down"></i></span>
-  </div>
-  <div class="category-item">
+
+  <!-- Beauty dropdown -->
+  <div class="category-item dropdown-container">
+  <img src="assets/beauty.jpg" alt="Beauty">
+  <span>Beauty <i class="fa-solid fa-chevron-down"></i></span>
+  <ul class="dropdown-menu" id="beauty-dropdown">
+    <li><a href="#">Makeup</a></li>
+    <li><a href="#">Skincare</a></li>
+    <li><a href="#">Haircare</a></li>
+  </ul>
+</div>
+
+
+  <!-- Health Corner dropdown -->
+  <div class="category-item dropdown-container" onclick="toggleDropdown('health-dropdown')">
     <img src="assets/healthcare.jpg" alt="Health Corner">
     <span>Health Corner <i class="fa-solid fa-chevron-down"></i></span>
+    <ul class="dropdown-menu" id="health-dropdown">
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Tips</a></li>
+      <li><a href="#">FAQs</a></li>
+    </ul>
   </div>
 </section>
 
+
+<!-- main health heading section -->
+
+<section class="priority-section">
+  <h2>Your Health, Our Priority</h2>
+  <p class="subtext">
+    Get medicines, health products, and lab tests delivered to your doorstep with Sapinox – your trusted online pharmacy.
+  </p>
+
+  <div class="priority-cards">
+    <div class="priority-card">
+      <div class="icon-glow"><i class="fa-solid fa-truck-fast"></i></div>
+      <h3>Fast Delivery</h3>
+      <p>Quick and reliable delivery to your doorstep within hours.</p>
+    </div>
+
+    <div class="priority-card">
+      <div class="icon-glow"><i class="fa-solid fa-shield-heart"></i></div>
+      <h3>Genuine Products</h3>
+      <p>100% authentic medicines and health products guaranteed.</p>
+    </div>
+
+    <div class="priority-card">
+      <div class="icon-glow"><i class="fa-solid fa-user-doctor"></i></div>
+      <h3>Expert Consultation</h3>
+      <p>Get professional medical advice from certified pharmacists.</p>
+    </div>
+  </div>
+</section>
 
 
 
